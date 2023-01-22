@@ -1,0 +1,36 @@
+		--------java source file--------
+In java, we can create any no of classes but atmost one public class can be created in single file. 
+If you are not using public modifier with these, the you can use any name to save this file. If you 
+are using public modifier with any class, then this file can be saved with that class name only.
+
+In java, you can create multiple classes and all those classes can contian "main" method. If there is 
+no public modifier with any class, and multiple main methods are present in multiple classes, then you 
+can save the file with any name. After executing program, a compiled file will be created for each class.
+You can execute any one of these file by writing "java className". If we are executing a particular class 
+after compilation, and that class contains main method, that class main method will be executed. 
+If we are executing class without main method, we will get compile time error.
+
+If there is main method and public class then main method should be in that public class.
+
+// chk kro, 1 public class lo or 1 without public or 2no m main method lko, kia error ata h k ni
+
+You can compile java file using "javac filename.java".
+
+// Why we need to place each class in separate class?
+It is how it has been designed and I am not sure if the reason is documented. But here is a good reason on 
+why it is done that way. Let's assume we have two public classes Y & Z in a file named Y.java. Now, let's 
+assume a different class X is using Z. Now, when we compile X, the compiler first tries to locate Z.class 
+and if it cannot find it, then it tries to locate Z.java so that it can compile it automatically. But, since 
+we only have Y.java, the class Z cannot be located and hence we get a compilation error. So, we do need to 
+place them in separate files.
+
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
