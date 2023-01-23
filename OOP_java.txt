@@ -25,6 +25,14 @@ we only have Y.java, the class Z cannot be located and hence we get a compilatio
 place them in separate files.
 
 -------------------------------------------------------------
+If you are using external libraries, you must import it or you can use fully qualified names.
+  
+1) Fully qualified names make our code hard to read ( If we need multiple references in our code, we have 
+to type full path each time, boilerplate code). 
+java.util.AL l = new java.util.AL();
+
+
+---------------------------------
 
 
 
