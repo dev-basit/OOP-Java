@@ -33,6 +33,63 @@ java.util.AL l = new java.util.AL();
 
 
 ---------------------------------
+1) Explicit Import
+import java.util.AL;
+Only that file will be imported, this is optimised and recommended way to import files.
+
+2) Implicit Import
+import java.util.*
+All files will be imported from java.util package. This is neither optimised way nor recommended. Since all
+the files are imported, our code size will be large and readability will be down (By readability down, 
+I mean confusion will be there. see below example.)
+
+import com.hbl.*
+import com.meezan.* 
+
+Account a = new Account();
+Loan l = new loan();
+
+We are not sure which bank account will be created, and for which bank we are applying for loan. 
+That's why explicit imports are highly recommended. Also, no IDE's generate implicit imports.
+
+------------------------------
+All classes and interfaces inside "java.lang" package are not require to import. Moreover, import statements 
+are not required for classes present inside same working directory. They all are imported by default.
+
+These are some classes present inside "java.lang" package: String, Thread, Exception, StringBuffer
+
+For Example:
+
+1) 
+public class Test{
+	public static void main(String[] args){
+		String s = new String("Durga");
+		Thread t = new Thread();
+	}
+} 
+
+
+2) Create this and save inside same working directory.
+class A{
+	public static void m1(){
+		Sytem.out.println(" Student class inside same directory ");
+	}
+} 
+
+// In same working directory, inside another file, write this // and access the above class without importing it.
+
+
+public class Test{
+	public static void main(String[] args){
+		// default import from java.lang package
+		String s = new String("Durga");
+		Thread t = new Thread();
+
+		// inside same working directory
+		A a = new A();
+		a.m1();
+	}
+} 
 
 
 
