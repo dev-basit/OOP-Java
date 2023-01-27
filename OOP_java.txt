@@ -92,6 +92,16 @@ public class Test{
 } 
 
 
+-----------------------------
+In java, pattern class is present insdie
+	java -> util (package) -> regex (package) -> pattern (class)
+
+Whenever we are importing a package, all classes or interfaces present in that package are available
+except those which are present in subpackage/s. If we want to access subpackage level classes or interfaces,
+we must write import statement until that subpackage level. Java compiler cannot import those itself.  
+ 
+import java.util.regex.* 
+
 
 
 
