@@ -102,6 +102,41 @@ we must write import statement until that subpackage level. Java compiler cannot
  
 import java.util.regex.* 
 
+-------------------------------------------------------------
+
+Package is group of related classes, interfaces and/or subpackage/s. Package is an encapsulation mechanism 
+in which related classes and interfaces are grouped inside single unit.
+"java.sql" package contains all classes and interfaces which are meant for database operation. 
+"java.io" package contains all classes and interfaces to work with i/o operations. 
+
+For example, if a package name is university.engineering.csedept, then there are three directories-
+university, engineering, and csedept such that csedept is present in engineering and engineering is 
+present in university. The package university can be considered as a top-level package while engineering 
+is a subpackage of university and cse dept is a sub-package of engineering.
+
+
+What is the advantage of doing so?
+
+1) Prevent naming conflicts.
+	As we know two classes for "Date" are present in java. One is presnet inside "java.util" package and 
+	another one inside "java.sql" package. If incase we didn't have the concept of "packages" in java, then
+	it would been imposible to have two "Date" classes. Therefore, the biggest advantage is that it prevents
+	 naming conflicts. 
+
+2) Moularity improved.
+	Since related classes and interfaces are grouped inside single unit or single package, we can achieve 
+	modularity. We know which class we have to reference. There is no confusion at all.
+
+3) Maintainability improved.
+	Since we can achieve modularity, that's why our code becomes maintainable.
+
+4) Security + Encapsulation + Information hiding. 
+     	If we don't make our classes public, we cannot access it outside our package. Therefore it gives us 
+		security.
+
+5) Reusability
+	Reuse the classes contained in the packages of other programs.
+
 
 
 
