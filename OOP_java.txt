@@ -138,6 +138,35 @@ What is the advantage of doing so?
 	Reuse the classes contained in the packages of other programs.
 
 
+-----------------------------
+
+1) Naming Package:
+Use your organization url/domain in reverse (This is a trend), like
+bank.hbl.com
+com.hbl.bank (Reverse)
+
+This package name is also syntactically valid:
+package A;
+
+
+2) Creating a package: package <packageName>;
+
+package com.hbl.bank;
+public class A{
+	public static void main(){
+		System.out.println("creating package");
+	}
+}
+
+
+// If you run "javac A.java", this will only create compiled class not package, so for package type this "javac -d . A.java"
+.(dot) represents current working directory. You can place any valid address here. When you run this 3 directories will be created if any directory doesn't exist already. These directories will be structured like
+cwd -> com -> hbl -> bank -> A (class)
+
+3) Executing 
+	If you want to execute/run class "present" inside a package, you must use fully qualified name to compile it
+java com.hbl.bank.A
+Since this class is present inside bank directory, that's why we are using full name to execute it. Remember when we used -d, it was compiled, now no need to compile again. Also, if you are using IDE's you only need to run the program, so you don't play with console.
 
 
 
