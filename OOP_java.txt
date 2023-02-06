@@ -168,6 +168,27 @@ cwd -> com -> hbl -> bank -> A (class)
 java com.hbl.bank.A
 Since this class is present inside bank directory, that's why we are using full name to execute it. Remember when we used -d, it was compiled, now no need to compile again. Also, if you are using IDE's you only need to run the program, so you don't play with console.
 
+--------------------------------
+
+In java program or java file at most 1 package is allowed. if you use more than one package, compiler will give error("class, interface or enum expected"). Remember I am not talking about importing a package. I am talking about creating a package:
+package packageName; 
+
+In java program the very first statement should be of creating package, after then you can use import statements.
+
+True
+package com.hbl.bank;
+import java.util.ArrayList; 
+
+False/Error
+import java.util.ArrayList; 
+package com.hbl.bank;
+
+So the order is (Top to bottom)
+Package statement 	(atmost 1)
+import statement  	(any no)
+class/interface/enum 	(any no)
+
+		--------java source file--------
 
 
 
